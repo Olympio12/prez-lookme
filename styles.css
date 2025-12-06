@@ -330,7 +330,6 @@ ul li::before {
 
 /* Responsive */
 @media (max-width: 768px) {
-    margin-top: 100px;
     h1 {
         font-size: 2rem;
     }
@@ -347,13 +346,9 @@ ul li::before {
         flex-direction: column;
         display: none;
     }
-    .nav-container {
-    padding: 0.7rem 0;
-    }
     .nav-menu li a {
         width: 100%;
         text-align: center;
-        padding: 0.6rem 1rem;
     }
 
     .content-section {
