@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype du Projet - LookMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .prototype-frame {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            margin: 2rem 0;
+        }
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .mockup-card {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .mockup-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+        .screen-preview {
+            background: white;
+            border-radius: 15px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid var(--border);
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>10. Prototype du Projet</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="section1.html">Contexte</a></li>
+                <li><a href="section2.html">Périmètre</a></li>
+                <li><a href="section3.html">Organisation</a></li>
+                <li><a href="section4.html">Budget</a></li>
+                <li><a href="section5.html">Planning</a></li>
+                <li><a href="section6.html">Risques</a></li>
+                <li><a href="section7.html">Parties Prenantes</a></li>
+                <li><a href="section8.html">Succès</a></li>
+                <li><a href="section9.html">Charte</a></li>
+                <li><a href="section10.html" class="active">Prototype</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <h2>Prototype & Maquettes de LookMe</h2>
+                
+                <div class="highlight-box" style="background: var(--gradient); color: white; border: none;">
+                    <h3 style="color: white; margin-top: 0;">Vision Design</h3>
+                    <p style="font-size: 1.15rem;">
+                        Les maquettes présentées ici illustrent l'identité visuelle et l'expérience utilisateur 
+                        de l'application LookMe. Le design s'inspire de l'esthétique Instagram avec des couleurs 
+                        vibrantes et une interface moderne et épurée.
+                    </p>
+                </div>
+
+                <h3>Parcours Utilisateur Principal</h3>
+                
+                <div class="mockup-grid">
+                    <div class="mockup-card">
+                        <h4>Écran d'Accueil</h4>
+                        <p>Landing page avec présentation de l'app et appel à l'action</p>
+                    </div>
+
+                    <div class="mockup-card">
+                        <h4>Inscription / Connexion</h4>
+                        <p>Authentification sécurisée, connexion via réseaux sociaux</p>
+                    </div>
+
+                    <div class="mockup-card">
+                        <h4>Dashboard</h4>
+                        <p>Page principale avec accès rapide aux fonctionnalités clés</p>
+                    </div>
+
+                    <div class="mockup-card">
+                        <h4>Profil Utilisateur</h4>
+                        <p>Gestion des préférences, historique, favoris</p>
+                    </div>
+
+                    <div class="mockup-card">
+                        <h4>Scan IA</h4>
+                        <p>Analyse du visage via caméra avec guidage temps réel</p>
+                    </div>
+
+                    <div class="mockup-card">
+                        <h4>Recommandations</h4>
+                        <p>Suggestions personnalisées de looks et tutoriels</p>
+                    </div>
+                </div>
+
+                
+                <h3>Fonctionnalités Clés Illustrées</h3>
+                
+                <div class="card">
+                    <h4>1. Analyse IA du Visage</h4>
+                    <ul>
+                        <li>Détection automatique des contours du visage</li>
+                        <li>Identification du teint, de la forme du visage</li>
+                        <li>Analyse des traits (yeux, sourcils, lèvres)</li>
+                        <li>Retour visuel en temps réel</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>2. Recommandations Personnalisées</h4>
+                    <ul>
+                        <li>Suggestions de coiffures adaptées à la morphologie</li>
+                        <li>Palettes de maquillage selon le teint</li>
+                        <li>Looks du jour basés sur les tendances</li>
+                        <li>Tutoriels étape par étape</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>3. Mode Préparation Rapide</h4>
+                    <ul>
+                        <li>Suggestions express en moins de 30 secondes</li>
+                        <li>Looks simples pour matins pressés</li>
+                        <li>Historique des looks favoris</li>
+                        <li>Un clic pour sauvegarder un look</li>
+                    </ul>
+                </div>
+
+                <h3>Principes UX Appliqués</h3>
+                
+                <div class="highlight-box">
+                    <h4 style="margin-top: 0;">Design Thinking</h4>
+                    <ul>
+                        <li><strong>Simplicité :</strong> Interface épurée, parcours fluide en ≤ 3 étapes</li>
+                        <li><strong>Accessibilité :</strong> Contraste élevé, taille de texte adaptable</li>
+                        <li><strong>Feedback visuel :</strong> Animations douces, indicateurs de progression</li>
+                        <li><strong>Personnalisation :</strong> Thème clair/sombre, préférences sauvegardées</li>
+                        <li><strong>Inclusivité :</strong> Représentation diverse, beauté pour tous</li>
+                    </ul>
+                </div>
+
+                <h3>Architecture de l'Information</h3>
+                
+                <div class="card">
+                    <h4>Navigation Principale</h4>
+                    <table style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th>Section</th>
+                                <th>Icône</th>
+                                <th>Fonction</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Accueil</strong></td>
+                                <td>🏠</td>
+                                <td>Dashboard avec accès rapide aux fonctionnalités</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Scanner</strong></td>
+                                <td>📸</td>
+                                <td>Analyse IA du visage et recommandations</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Looks</strong></td>
+                                <td>✨</td>
+                                <td>Bibliothèque de looks et tutoriels</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Favoris</strong></td>
+                                <td>❤️</td>
+                                <td>Looks sauvegardés et historique</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Profil</strong></td>
+                                <td>👤</td>
+                                <td>Paramètres et gestion du compte</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>🔗 Lien vers le Prototype Interactif</h3>
+                
+                <div class="prototype-frame">
+                    <h4>Prototype de Présentation</h4>
+                    <p style="margin: 1.5rem 0;">
+                        Le prototype complet de présentation est disponible ici:
+                    </p>
+                    <a href="https://olympio12.github.io/mvp-lookme/" 
+                       target="_blank" 
+                       class="btn btn-primary" 
+                       style="display: inline-block; text-decoration: none;">
+                        Voir le Prototype
+                    </a>
+                </div>
+
+                <div style="text-align: center; margin: 3rem 0; padding: 3rem; background: var(--gradient); border-radius: 20px; color: white;">
+                    <h3 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">
+                        💄✨ LookMe
+                    </h3>
+                    <p style="font-size: 1.3rem; margin-bottom: 0;">
+                        Révélez la meilleure version de vous-même
+                    </p>
+                </div>
+
+                <div class="navigation-buttons">
+                    <a href="section9.html" class="btn btn-secondary">← Charte d'Équipe</a>
+                    <a href="index.html" class="btn btn-primary">Retour à l'Accueil 🏠</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

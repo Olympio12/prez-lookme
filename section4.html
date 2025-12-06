@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Prévisionnel - LookMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .budget-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .budget-card {
+            background: var(--gradient);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+        }
+        .budget-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+        .chart-container {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>04. Budget Prévisionnel</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="section1.html">Contexte</a></li>
+                <li><a href="section2.html">Périmètre</a></li>
+                <li><a href="section3.html">Organisation</a></li>
+                <li><a href="section4.html" class="active">Budget</a></li>
+                <li><a href="section5.html">Planning</a></li>
+                <li><a href="section6.html">Risques</a></li>
+                <li><a href="section7.html">Parties Prenantes</a></li>
+                <li><a href="section8.html">Succès</a></li>
+                <li><a href="section9.html">Charte</a></li>
+                <li><a href="section10.html">Prototype</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <h2>Budget Prévisionnel</h2>
+                
+                <div class="budget-summary">
+                    <div class="budget-card">
+                        <div style="font-size: 2rem;">💰</div>
+                        <div class="budget-amount">300 000 €</div>
+                        <p>Budget Total</p>
+                    </div>
+                    <div class="budget-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div style="font-size: 2rem;">📊</div>
+                        <div class="budget-amount">6 mois</div>
+                        <p>Durée du projet</p>
+                    </div>
+                    <div class="budget-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div style="font-size: 2rem;">🎯</div>
+                        <div class="budget-amount">±5%</div>
+                        <p>Marge d'écart autorisée</p>
+                    </div>
+                </div>
+
+                <h3>Répartition Budgétaire Détaillée</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Sous-catégorie</th>
+                            <th>Montant</th>
+                            <th>% du Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(131, 58, 180, 0.1);">
+                            <td rowspan="5"><strong>1. Développement Technique</strong></td>
+                            <td>Développement Frontend Mobile</td>
+                            <td>45 000 €</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr style="background: rgba(131, 58, 180, 0.1);">
+                            <td>Développement Backend & API</td>
+                            <td>40 000 €</td>
+                            <td>13%</td>
+                        </tr>
+                        <tr style="background: rgba(131, 58, 180, 0.1);">
+                            <td>Développement IA & Machine Learning</td>
+                            <td>60 000 €</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr style="background: rgba(131, 58, 180, 0.1);">
+                            <td>Tests & Qualité (QA)</td>
+                            <td>20 000 €</td>
+                            <td>7%</td>
+                        </tr>
+                        <tr style="background: rgba(131, 58, 180, 0.1);">
+                            <td><strong>Total Développement</strong></td>
+                            <td><strong>165 000 €</strong></td>
+                            <td><strong>55%</strong></td>
+                        </tr>
+                        
+                        <tr style="background: rgba(225, 48, 108, 0.1);">
+                            <td rowspan="4"><strong>2. Design & UX</strong></td>
+                            <td>Design UI/UX & Prototypes</td>
+                            <td>30 000 €</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr style="background: rgba(225, 48, 108, 0.1);">
+                            <td>Identité visuelle & Logo</td>
+                            <td>10 000 €</td>
+                            <td>3%</td>
+                        </tr>
+                        <tr style="background: rgba(225, 48, 108, 0.1);">
+                            <td>Tests utilisateurs & Itérations</td>
+                            <td>8 000 €</td>
+                            <td>3%</td>
+                        </tr>
+                        <tr style="background: rgba(225, 48, 108, 0.1);">
+                            <td><strong>Total Design</strong></td>
+                            <td><strong>48 000 €</strong></td>
+                            <td><strong>16%</strong></td>
+                        </tr>
+
+                        <tr style="background: rgba(247, 119, 55, 0.1);">
+                            <td rowspan="5"><strong>3. Infrastructure & Services</strong></td>
+                            <td>Hébergement Cloud (6 mois)</td>
+                            <td>12 000 €</td>
+                            <td>4%</td>
+                        </tr>
+                        <tr style="background: rgba(247, 119, 55, 0.1);">
+                            <td>Services API IA (licences)</td>
+                            <td>18 000 €</td>
+                            <td>6%</td>
+                        </tr>
+                        <tr style="background: rgba(247, 119, 55, 0.1);">
+                            <td>Outils de développement & licences</td>
+                            <td>10 000 €</td>
+                            <td>3%</td>
+                        </tr>
+                        <tr style="background: rgba(247, 119, 55, 0.1);">
+                            <td>Sécurité & Conformité RGPD</td>
+                            <td>15 000 €</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr style="background: rgba(247, 119, 55, 0.1);">
+                            <td><strong>Total Infrastructure</strong></td>
+                            <td><strong>55 000 €</strong></td>
+                            <td><strong>18%</strong></td>
+                        </tr>
+
+                        <tr style="background: rgba(252, 175, 69, 0.1);">
+                            <td rowspan="4"><strong>4. Marketing & Communication</strong></td>
+                            <td>Stratégie communication</td>
+                            <td>8 000 €</td>
+                            <td>3%</td>
+                        </tr>
+                        <tr style="background: rgba(252, 175, 69, 0.1);">
+                            <td>Documentation & Supports</td>
+                            <td>5 000 €</td>
+                            <td>2%</td>
+                        </tr>
+                        <tr style="background: rgba(252, 175, 69, 0.1);">
+                            <td>Développement partenariats</td>
+                            <td>7 000 €</td>
+                            <td>2%</td>
+                        </tr>
+                        <tr style="background: rgba(252, 175, 69, 0.1);">
+                            <td><strong>Total Marketing</strong></td>
+                            <td><strong>20 000 €</strong></td>
+                            <td><strong>7%</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="1"><strong>5. Gestion de Projet</strong></td>
+                            <td>Management & Coordination</td>
+                            <td>12 000 €</td>
+                            <td>4%</td>
+                        </tr>
+
+                        <tr style="background: var(--gradient); color: white;">
+                            <td colspan="2"><strong>TOTAL BUDGET</strong></td>
+                            <td><strong>300 000 €</strong></td>
+                            <td><strong>100%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Sources de Financement</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                    <div class="card">
+                        <h4>Investisseurs Privés</h4>
+                        <p style="font-size: 2rem; color: var(--ig-purple); font-weight: 700;">200 000 €</p>
+                        <p>Fonds d'amorçage et investissement initial</p>
+                    </div>
+                    <div class="card">
+                        <h4>Subventions & Aides</h4>
+                        <p style="font-size: 2rem; color: var(--ig-pink); font-weight: 700;">50 000 €</p>
+                        <p>Programmes d'innovation et startup tech</p>
+                    </div>
+                    <div class="card">
+                        <h4>Fonds Propres</h4>
+                        <p style="font-size: 2rem; color: var(--ig-orange); font-weight: 700;">50 000 €</p>
+                        <p>Contribution de l'équipe fondatrice</p>
+                    </div>
+                </div>
+
+                <h3>Suivi et Contrôle Budgétaire</h3>
+                
+                <div class="highlight-box">
+                    <h4 style="margin-top: 0;">Mécanismes de Contrôle</h4>
+                    <ul>
+                        <li><strong>Suivi hebdomadaire</strong> - Tableaux de bord financiers mis à jour chaque semaine</li>
+                        <li><strong>Revues mensuelles en COPIL</strong> - Validation des dépenses et arbitrages</li>
+                        <li><strong>Seuils d'alerte</strong> - Notification automatique si dépassement > 3%</li>
+                        <li><strong>Réserve de contingence</strong> - 5% du budget total (15 000 €) pour imprévus</li>
+                        <li><strong>Procédure d'escalade</strong> - Validation obligatoire pour tout dépassement > 5%</li>
+                    </ul>
+                </div>
+
+                <h3>Stratégie d'Optimisation</h3>
+                
+                <div class="card">
+                    <h4>Opportunités d'économie</h4>
+                    <ul>
+                        <li>Utilisation d'outils open-source pour réduire les coûts de licences</li>
+                        <li>Négociation de tarifs préférentiels avec les fournisseurs cloud</li>
+                        <li>Mutualisation des ressources avec des partenaires technologiques</li>
+                        <li>Optimisation des coûts d'infrastructure via l'architecture serverless</li>
+                        <li>Échange de services avec marques partenaires (barter)</li>
+                    </ul>
+                </div>
+
+                <div class="navigation-buttons">
+                    <a href="section3.html" class="btn btn-secondary">← Organisation</a>
+                    <a href="section5.html" class="btn btn-primary">Planning →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

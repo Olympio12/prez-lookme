@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parties Prenantes - LookMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>07. Analyse des Parties Prenantes</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="section1.html">Contexte</a></li>
+                <li><a href="section2.html">Périmètre</a></li>
+                <li><a href="section3.html">Organisation</a></li>
+                <li><a href="section4.html">Budget</a></li>
+                <li><a href="section5.html">Planning</a></li>
+                <li><a href="section6.html">Risques</a></li>
+                <li><a href="section7.html" class="active">Parties Prenantes</a></li>
+                <li><a href="section8.html">Succès</a></li>
+                <li><a href="section9.html">Charte</a></li>
+                <li><a href="section10.html">Prototype</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <h2>Analyse des Parties Prenantes</h2>
+                
+                <h3>Matrice Pouvoir / Intérêt</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Contre le projet</th>
+                            <th>Pour le projet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(131, 58, 180, 0.1);">
+                            <td><strong>Pouvoir élevé / Intérêt élevé</strong><br><small>(Gestion étroite)</small></td>
+                            <td>-</td>
+                            <td>
+                                🟩 Chef de projet<br>
+                                🟩 Investisseurs / financeurs<br>
+                                🟩 Marques cosmétiques partenaires
+                            </td>
+                        </tr>
+                        <tr style="background: rgba(225, 48, 108, 0.1);">
+                            <td><strong>Pouvoir élevé / Intérêt faible</strong><br><small>(Satisfaire)</small></td>
+                            <td>-</td>
+                            <td>
+                                🟨 Autorités RGPD
+                            </td>
+                        </tr>
+                        <tr style="background: rgba(247, 119, 55, 0.1);">
+                            <td><strong>Pouvoir faible / Intérêt élevé</strong><br><small>(Informer régulièrement)</small></td>
+                            <td>
+                                🔶 Certains utilisateurs méfiants envers l'IA
+                            </td>
+                            <td>
+                                🟩 Utilisateurs finaux<br>
+                                🟩 Influenceurs beauté
+                            </td>
+                        </tr>
+                        <tr style="background: rgba(252, 175, 69, 0.1);">
+                            <td><strong>Pouvoir faible / Intérêt faible</strong><br><small>(Surveiller)</small></td>
+                            <td>-</td>
+                            <td>
+                                🟨 Prestataires techniques externes
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Détail des Parties Prenantes</h3>
+                
+                <div class="card" style="background: linear-gradient(135deg, rgba(131, 58, 180, 0.05), rgba(225, 48, 108, 0.05));">
+                    <h4>Équipe Projet</h4>
+                    <p><strong>Niveau d'importance :</strong> ⭐⭐⭐⭐ (Très élevée)</p>
+                    <p><strong>Motivations principales :</strong></p>
+                    <ul>
+                        <li>Réussir le projet dans les délais</li>
+                        <li>Renforcer la crédibilité professionnelle</li>
+                        <li>Fédérer l'équipe autour d'une vision commune</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 1rem;">
+                        <p><strong>Stratégie de gestion :</strong></p>
+                        <p>Collaboration étroite, réunions hebdomadaires, gestion proactive des risques, communication transparente</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Investisseurs / Financeurs</h4>
+                    <p><strong>Niveau d'importance :</strong> ⭐⭐⭐⭐ (Très élevée)</p>
+                    <p><strong>Motivations principales :</strong></p>
+                    <ul>
+                        <li>Retour sur investissement (ROI)</li>
+                        <li>Potentiel de croissance et scalabilité</li>
+                        <li>Viabilité du modèle freemium</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 1rem;">
+                        <p><strong>Stratégie de gestion :</strong></p>
+                        <p>Rapports d'avancement réguliers, démonstrations MVP, indicateurs ROI clairs, communication sur les jalons atteints</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Marques Cosmétiques Partenaires</h4>
+                    <p><strong>Niveau d'importance :</strong> ⭐⭐⭐⭐ (Très élevée)</p>
+                    <p><strong>Motivations principales :</strong></p>
+                    <ul>
+                        <li>Visibilité accrue et nouveaux canaux de vente</li>
+                        <li>Image innovante via la beauty-tech</li>
+                        <li>Accès aux données consommateurs (anonymisées)</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 1rem;">
+                        <p><strong>Stratégie de gestion :</strong></p>
+                        <p>Négociations B2B, opportunités de co-branding, tableaux de bord de performance des partenariats</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Utilisateurs Finaux</h4>
+                    <p><strong>Niveau d'importance :</strong> ⭐⭐⭐ (Élevée)</p>
+                    <p><strong>Motivations principales :</strong></p>
+                    <ul>
+                        <li>Application intuitive, rapide et utile</li>
+                        <li>Amélioration de la routine beauté quotidienne</li>
+                        <li>Recommandations personnalisées pertinentes</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 1rem;">
+                        <p><strong>Stratégie de gestion :</strong></p>
+                        <p>Tests utilisateurs réguliers, feedback continus, intégration des suggestions dans les mises à jour, support client réactif</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Influenceurs Beauté</h4>
+                    <p><strong>Niveau d'importance :</strong> ⭐⭐ (Moyenne)</p>
+                    <p><strong>Motivations principales :</strong></p>
+                    <ul>
+                        <li>Gagner en visibilité</li>
+                        <li>Créer du contenu sponsorisé innovant</li>
+                        <li>Renforcer leur image tech & beauté</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 1rem;">
+                        <p><strong>Stratégie de gestion :</strong></p>
+                        <p>Collaborations sur mesure, programmes d'ambassadeurs, visibilité dans l'application, accès early-access</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Prestataires Techniques Externes</h4>
+                    <p><strong>Niveau d'importance :</strong> ⭐⭐ (Moyenne)</p>
+                    <p><strong>Motivations principales :</strong></p>
+                    <ul>
+                        <li>Réussir la mission confiée</li>
+                        <li>Développer une solution performante</li>
+                        <li>Renforcer leur réputation professionnelle</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 1rem;">
+                        <p><strong>Stratégie de gestion :</strong></p>
+                        <p>Cahier des charges clair, suivi qualité et délais, validations intermédiaires, paiements selon jalons</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>Autorités RGPD / Légales</h4>
+                    <p><strong>Niveau d'importance :</strong> ⭐⭐ (Moyenne)</p>
+                    <p><strong>Motivations principales :</strong></p>
+                    <ul>
+                        <li>Assurer la conformité en matière de données biométriques</li>
+                        <li>Protéger la confidentialité des utilisateurs</li>
+                        <li>Veiller au respect de la réglementation</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 1rem;">
+                        <p><strong>Stratégie de gestion :</strong></p>
+                        <p>Documentation RGPD complète, audits ponctuels, transparence totale sur la gestion des données, privacy by design</p>
+                    </div>
+                </div>
+
+                <h3>Stratégies d'Engagement par Catégorie</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Fréquence Communication</th>
+                            <th>Canaux Privilégiés</th>
+                            <th>Actions Clés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pouvoir élevé / Intérêt élevé</strong></td>
+                            <td>Hebdomadaire</td>
+                            <td>Réunions COPIL, Emails, Dashboards</td>
+                            <td>Implication décisionnelle, validation jalons</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pouvoir élevé / Intérêt faible</strong></td>
+                            <td>Mensuelle</td>
+                            <td>Rapports formels, Audits</td>
+                            <td>Information réglementaire, conformité</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pouvoir faible / Intérêt élevé</strong></td>
+                            <td>Bimensuelle</td>
+                            <td>Newsletters, Réseaux sociaux, Tests</td>
+                            <td>Feedback, co-création, engagement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pouvoir faible / Intérêt faible</strong></td>
+                            <td>Trimestrielle</td>
+                            <td>Emails, Réunions ponctuelles</td>
+                            <td>Information générale, suivi contrats</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="navigation-buttons">
+                    <a href="section6.html" class="btn btn-secondary">← Risques</a>
+                    <a href="section8.html" class="btn btn-primary">Conditions de Succès →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Prévisionnel - LookMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .timeline {
+            position: relative;
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient);
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+            padding: 0 2.5rem;
+        }
+        .timeline-item:nth-child(odd) {
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+            text-align: left;
+        }
+        .timeline-content {
+            background: white;
+            border: 3px solid var(--ig-purple);
+            padding: 2rem;
+            border-radius: 16px;
+            position: relative;
+            box-shadow: 0 5px 25px var(--shadow);
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            border-color: var(--ig-pink);
+        }
+        .timeline-date {
+            font-weight: 700;
+            color: white;
+            background: var(--gradient);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .pert-diagram {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        .gantt-chart {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        @media (max-width: 768px) {
+            .timeline::before {left: 0;}
+            .timeline-item, .timeline-item:nth-child(even) {
+                width: 100%;
+                margin-left: 0;
+                padding-left: 3rem;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>05. Planning Prévisionnel</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="section1.html">Contexte</a></li>
+                <li><a href="section2.html">Périmètre</a></li>
+                <li><a href="section3.html">Organisation</a></li>
+                <li><a href="section4.html">Budget</a></li>
+                <li><a href="section5.html" class="active">Planning</a></li>
+                <li><a href="section6.html">Risques</a></li>
+                <li><a href="section7.html">Parties Prenantes</a></li>
+                <li><a href="section8.html">Succès</a></li>
+                <li><a href="section9.html">Charte</a></li>
+                <li><a href="section10.html">Prototype</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <h2>Planning Prévisionnel</h2>
+                
+                <div class="highlight-box" style="background: var(--gradient); color: white; border: none;">
+                    <h3 style="color: white; margin-top: 0;">   Vue d'ensemble</h3>
+                    <p style="font-size: 1.15rem;">
+                        <strong>Durée totale :</strong> 6 mois (Décembre 2025 - Mai 2026)<br>
+                        <strong>Méthodologie :</strong> Agile avec sprints de 2 semaines<br>
+                        <strong>Jalons clés :</strong> 5 phases majeures avec livrables validés
+                    </p>
+                </div>
+
+                <h3>Timeline du Projet</h3>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Décembre 2025</div>
+                            <h4 style="color: var(--ig-purple);">Phase 1 : Cadrage & Lancement</h4>
+                            <p><strong>Livrables :</strong></p>
+                            <ul style="text-align: left;">
+                                <li>Cahier des charges validé</li>
+                                <li>Charte de projet signée</li>
+                                <li>Équipe constituée</li>
+                                <li>Environnements techniques préparés</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Janvier - Février 2026</div>
+                            <h4 style="color: var(--ig-pink);">Phase 2 : Conception UX/UI & IA</h4>
+                            <p><strong>Livrables :</strong></p>
+                            <ul style="text-align: left;">
+                                <li>Maquettes validées (Figma)</li>
+                                <li>Prototype interactif</li>
+                                <li>Modèle IA V1 (reconnaissance faciale)</li>
+                                <li>Charte graphique finalisée</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Mars 2026</div>
+                            <h4 style="color: var(--ig-purple);">Phase 3 : Développement Sprint 1-2</h4>
+                            <p><strong>Livrables :</strong></p>
+                            <ul style="text-align: left;">
+                                <li>Frontend mobile (version alpha)</li>
+                                <li>Backend & API fonctionnels</li>
+                                <li>Système d'authentification</li>
+                                <li>Intégration IA initiée</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Avril 2026</div>
+                            <h4 style="color: var(--ig-pink);">Phase 4 : Tests & Ajustements</h4>
+                            <p><strong>Livrables :</strong></p>
+                            <ul style="text-align: left;">
+                                <li>Tests utilisateurs (50 bêta-testeurs)</li>
+                                <li>Correctifs bugs critiques</li>
+                                <li>Optimisations performances</li>
+                                <li>Version pré-production</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Mai 2026</div>
+                            <h4 style="color: var(--ig-orange);">Phase 5 : Livraison MVP</h4>
+                            <p><strong>Livrables :</strong></p>
+                            <ul style="text-align: left;">
+                                <li>Application LookMe V1.0</li>
+                                <li>Documentation complète</li>
+                                <li>Publication App Store & Google Play</li>
+                                <li>Plan de déploiement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Liste des Tâches PERT</h3>
+                
+                <div class="pert-diagram">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Tâche</th>
+                                <th>Durée</th>
+                                <th>Prédécesseurs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: rgba(131, 58, 180, 0.1);">
+                                <td colspan="4"><strong>A - Interface Utilisateur</strong></td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>Brainstorming</td>
+                                <td>1 semaine</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>A2</td>
+                                <td>Dashboard</td>
+                                <td>2 semaines</td>
+                                <td>A1</td>
+                            </tr>
+                            <tr>
+                                <td>A3</td>
+                                <td>Logo</td>
+                                <td>1 semaine</td>
+                                <td>A1</td>
+                            </tr>
+                            <tr>
+                                <td>A4</td>
+                                <td>Design écrans</td>
+                                <td>3 semaines</td>
+                                <td>A2</td>
+                            </tr>
+                            <tr>
+                                <td>A5</td>
+                                <td>Prototype interactif</td>
+                                <td>2 semaines</td>
+                                <td>A4</td>
+                            </tr>
+                            <tr>
+                                <td>A6</td>
+                                <td>Tests utilisateurs maquette</td>
+                                <td>1 semaine</td>
+                                <td>A5</td>
+                            </tr>
+                            <tr>
+                                <td>A7</td>
+                                <td>Ajustements UI/UX</td>
+                                <td>1 semaine</td>
+                                <td>A6</td>
+                            </tr>
+                            
+                            <tr style="background: rgba(225, 48, 108, 0.1);">
+                                <td colspan="4"><strong>B - Développement Front-End</strong></td>
+                            </tr>
+                            <tr>
+                                <td>B1</td>
+                                <td>Mise en place projet</td>
+                                <td>1 semaine</td>
+                                <td>A7</td>
+                            </tr>
+                            <tr>
+                                <td>B2</td>
+                                <td>Implémentation UI</td>
+                                <td>4 semaines</td>
+                                <td>B1</td>
+                            </tr>
+                            <tr>
+                                <td>B3</td>
+                                <td>Gestion navigation</td>
+                                <td>1 semaine</td>
+                                <td>B2</td>
+                            </tr>
+                            <tr>
+                                <td>B4</td>
+                                <td>Intégration API</td>
+                                <td>2 semaines</td>
+                                <td>B3, C3</td>
+                            </tr>
+                            <tr>
+                                <td>B5</td>
+                                <td>Optimisations & performance</td>
+                                <td>1 semaine</td>
+                                <td>B4</td>
+                            </tr>
+                            
+                            <tr style="background: rgba(247, 119, 55, 0.1);">
+                                <td colspan="4"><strong>C - Développement Back-End</strong></td>
+                            </tr>
+                            <tr>
+                                <td>C1</td>
+                                <td>Architecture API</td>
+                                <td>2 semaines</td>
+                                <td>A7</td>
+                            </tr>
+                            <tr>
+                                <td>C2</td>
+                                <td>Modélisation BDD</td>
+                                <td>1 semaine</td>
+                                <td>C1</td>
+                            </tr>
+                            <tr>
+                                <td>C3</td>
+                                <td>Endpoints / CRUD</td>
+                                <td>3 semaines</td>
+                                <td>C2</td>
+                            </tr>
+                            <tr>
+                                <td>C4</td>
+                                <td>Authentification</td>
+                                <td>1 semaine</td>
+                                <td>C3</td>
+                            </tr>
+                            <tr>
+                                <td>C5</td>
+                                <td>Sécurité / Chiffrement</td>
+                                <td>2 semaines</td>
+                                <td>C4</td>
+                            </tr>
+                            <tr>
+                                <td>C6</td>
+                                <td>Intégration IA</td>
+                                <td>3 semaines</td>
+                                <td>C5</td>
+                            </tr>
+                            
+                            <tr style="background: rgba(252, 175, 69, 0.1);">
+                                <td colspan="4"><strong>D - Tests</strong></td>
+                            </tr>
+                            <tr>
+                                <td>D1</td>
+                                <td>Tests unitaires frontend</td>
+                                <td>1 semaine</td>
+                                <td>B5</td>
+                            </tr>
+                            <tr>
+                                <td>D2</td>
+                                <td>Tests unitaires backend</td>
+                                <td>1 semaine</td>
+                                <td>C6</td>
+                            </tr>
+                            <tr>
+                                <td>D3</td>
+                                <td>Tests d'intégration</td>
+                                <td>2 semaines</td>
+                                <td>D1, D2</td>
+                            </tr>
+                            <tr>
+                                <td>D4</td>
+                                <td>Correctifs</td>
+                                <td>2 semaines</td>
+                                <td>D3</td>
+                            </tr>
+                            
+                            <tr style="background: rgba(131, 58, 180, 0.1);">
+                                <td colspan="4"><strong>E - Environnement</strong></td>
+                            </tr>
+                            <tr>
+                                <td>E1</td>
+                                <td>Builds Android / iOS</td>
+                                <td>1 semaine</td>
+                                <td>D4</td>
+                            </tr>
+                            
+                            <tr style="background: rgba(225, 48, 108, 0.1);">
+                                <td colspan="4"><strong>F - Management</strong></td>
+                            </tr>
+                            <tr>
+                                <td>F1</td>
+                                <td>Planification</td>
+                                <td>Continu</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>F2</td>
+                                <td>Matrice QCD</td>
+                                <td>Continu</td>
+                                <td>F1</td>
+                            </tr>
+                            <tr>
+                                <td>F3</td>
+                                <td>Suivi / comités</td>
+                                <td>Continu</td>
+                                <td>F1</td>
+                            </tr>
+                            <tr>
+                                <td>F4</td>
+                                <td>Documentation</td>
+                                <td>Continu</td>
+                                <td>F1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Jalons Clés (Milestones)</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                    <div class="card" style="border-left: 5px solid var(--ig-purple);">
+                        <strong style="color: var(--ig-purple);">Milestone 1</strong>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">31 Décembre 2025</p>
+                        <p>Cahier des charges validé</p>
+                    </div>
+                    <div class="card" style="border-left: 5px solid var(--ig-pink);">
+                        <strong style="color: var(--ig-pink);">Milestone 2</strong>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">28 Février 2026</p>
+                        <p>Design & IA V1 validés</p>
+                    </div>
+                    <div class="card" style="border-left: 5px solid var(--ig-orange);">
+                        <strong style="color: var(--ig-orange);">Milestone 3</strong>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">31 Mars 2026</p>
+                        <p>Intégration complète</p>
+                    </div>
+                    <div class="card" style="border-left: 5px solid var(--ig-yellow);">
+                        <strong style="color: var(--ig-yellow);">Milestone 4</strong>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">30 Avril 2026</p>
+                        <p>Tests & recette terminés</p>
+                    </div>
+                    <div class="card" style="border-left: 5px solid #667eea;">
+                        <strong style="color: #667eea;">Milestone 5</strong>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">15 Mai 2026</p>
+                        <p>Livraison MVP final</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4 style="margin-top: 0;">Retard Maximal Toléré</h4>
+                    <p>Le planning inclut une marge de sécurité de <strong>2 semaines</strong> par phase. 
+                    Tout retard supérieur nécessite une escalade au COPIL et un plan d'action correctif.</p>
+                </div>
+
+                <div class="navigation-buttons">
+                    <a href="section4.html" class="btn btn-secondary">← Budget</a>
+                    <a href="section6.html" class="btn btn-primary">Risques →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

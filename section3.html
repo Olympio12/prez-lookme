@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisation du Projet - LookMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 3rem 0;
+        }
+        .org-level {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .org-box {
+            background: white;
+            border: 2px solid var(--ig-purple);
+            border-radius: 12px;
+            padding: 1.5rem;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+        .org-box.chef {
+            background: var(--gradient);
+            color: white;
+            border: none;
+        }
+        .tree-structure {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 12px;
+        }
+        .tree-item {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            border-left: 3px solid var(--ig-purple);
+        }
+        .tree-item .tree-item {
+            padding-left: 2rem;
+            border-left-color: var(--ig-pink);
+        }
+        .tree-item .tree-item .tree-item {
+            border-left-color: var(--ig-orange);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>03. Organisation du Projet</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="section1.html">Contexte</a></li>
+                <li><a href="section2.html">Périmètre</a></li>
+                <li><a href="section3.html" class="active">Organisation</a></li>
+                <li><a href="section4.html">Budget</a></li>
+                <li><a href="section5.html">Planning</a></li>
+                <li><a href="section6.html">Risques</a></li>
+                <li><a href="section7.html">Parties Prenantes</a></li>
+                <li><a href="section8.html">Succès</a></li>
+                <li><a href="section9.html">Charte</a></li>
+                <li><a href="section10.html">Prototype</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <h2>Organisation du Projet</h2>
+                
+                <h3>OBS - Organizational Breakdown Structure</h3>
+                <p>Structure organisationnelle de l'équipe LookMe :</p>
+                
+                <div class="org-chart">
+                    <div class="org-level">
+                        <div class="org-box chef">
+                            <div style="font-size: 2rem;">👑</div>
+                            <strong style="font-size: 1.2rem;">Prunelle HOUNGBEDJI</strong><br>
+                            <small>Cheffe de Projet</small>
+                        </div>
+                    </div>
+                    <div class="org-level">
+                        <div class="org-box">
+                            <div style="font-size: 1.8rem;">📢</div>
+                            <strong>Christian NWOS</strong><br>
+                            <small>Responsable Communication</small>
+                        </div>
+                        <div class="org-box">
+                            <div style="font-size: 1.8rem;">🔧</div>
+                            <strong>Arnaud OLYMPIO</strong><br>
+                            <small>Responsable Technique & IA</small>
+                        </div>
+                        <div class="org-box">
+                            <div style="font-size: 1.8rem;">🎨</div>
+                            <strong>Moustapha SENE</strong><br>
+                            <small>UX Designer</small>
+                        </div>
+                        <div class="org-box">
+                            <div style="font-size: 1.8rem;">🤝</div>
+                            <strong>William VEYNAT</strong><br>
+                            <small>Responsable Partenariats</small>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>PBS - Product Breakdown Structure</h3>
+                <p>Décomposition du livrable (produits et composants uniquement) :</p>
+                
+                <div class="tree-structure">
+                    <div class="tree-item">
+                        <strong style="color: var(--ig-purple); font-size: 1.1rem;">0. LookMe – Application Mobile</strong> (livrable final)
+                        
+                        <div class="tree-item">
+                            <strong>1. Interface Utilisateur & Expérience (UI/UX)</strong>
+                            <div class="tree-item">
+                                1.1. Design système LookMe (charte beige, police, composants)
+                            </div>
+                            <div class="tree-item">
+                                1.2. Logo LookMe
+                            </div>
+                            <div class="tree-item">
+                                1.3. Écrans principaux
+                                <div class="tree-item">
+                                    1.3.1. Écran d'accueil<br>
+                                    1.3.2. Page d'inscription / connexion<br>
+                                    1.3.3. Dashboard / page principale<br>
+                                    1.3.4. Page profil utilisateur<br>
+                                    1.3.5. Page IA LookMe (scanner / analyse / recommandations)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tree-item">
+                            <strong>2. Fonctionnalités Applicatives</strong>
+                            <div class="tree-item">
+                                2.1. Système de compte utilisateur<br>
+                                2.2. Gestion du profil (photos, infos, préférences)<br>
+                                2.3. Moteur IA LookMe
+                            </div>
+                        </div>
+
+                        <div class="tree-item">
+                            <strong>3. Architecture Technique</strong>
+                            <div class="tree-item">
+                                3.1. Base de données<br>
+                                3.2. Serveur & hébergement<br>
+                                3.3. Sécurité (RGPD, chiffrement)
+                            </div>
+                        </div>
+
+                        <div class="tree-item">
+                            <strong>4. Environnement</strong>
+                            <div class="tree-item">
+                                4.1. Build Android<br>
+                                4.2. Build iOS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>WBS - Work Breakdown Structure</h3>
+                <p>Décomposition des tâches nécessaires pour produire les éléments du PBS :</p>
+                
+                <div class="card">
+                    <h4>1. ACTIVITÉS DÉVELOPPEMENT</h4>
+                    
+                    <div class="tree-structure" style="margin-top: 1rem;">
+                        <div class="tree-item">
+                            <strong>1.1. Interface Utilisateur</strong>
+                            <div class="tree-item">
+                                1.1.1. Brainstorming<br>
+                                1.1.2. Création du dashboard (tons beige, identité visuelle)<br>
+                                1.1.3. Création du logo LookMe<br>
+                                1.1.4. Design des écrans (Accueil, Connexion, Dashboard, Profil, IA LookMe)<br>
+                                1.1.5. Prototypes interactifs<br>
+                                1.1.6. Tests utilisateurs sur maquettes<br>
+                                1.1.7. Ajustements UI/UX
+                            </div>
+                        </div>
+
+                        <div class="tree-item">
+                            <strong>1.2. Architecture</strong>
+                            <div class="tree-item">
+                                <strong>1.2.1. Développement Front-End Mobile</strong>
+                                <div class="tree-item">
+                                    • Mise en place du projet (React Native / Flutter)<br>
+                                    • Implémentation UI (tous écrans)<br>
+                                    • Gestion de la navigation<br>
+                                    • Intégration API backend<br>
+                                    • Optimisations & performances
+                                </div>
+                            </div>
+                            <div class="tree-item">
+                                <strong>1.2.2. Développement Backend</strong>
+                                <div class="tree-item">
+                                    • Architecture API<br>
+                                    • Modélisation base de données<br>
+                                    • Développement endpoints (CRUD utilisateurs, profil…)<br>
+                                    • Système d'authentification<br>
+                                    • Sécurité & chiffrement<br>
+                                    • Intégration module IA
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tree-item">
+                            <strong>1.3. Tests</strong>
+                            <div class="tree-item">
+                                1.3.1. Tests unitaires frontend<br>
+                                1.3.2. Tests unitaires backend<br>
+                                1.3.3. Tests d'intégration (API + mobile)<br>
+                                1.3.4. Correctifs et validations
+                            </div>
+                        </div>
+
+                        <div class="tree-item">
+                            <strong>1.4. Environnement</strong>
+                            <div class="tree-item">
+                                1.4.1. Préparation des builds Android / iOS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 1.5rem;">
+                    <h4>2. MANAGEMENT</h4>
+                    
+                    <div class="tree-structure" style="margin-top: 1rem;">
+                        <div class="tree-item">
+                            <strong>2.1. Gestion de projet</strong>
+                            <div class="tree-item">
+                                2.1.1. Planification initiale<br>
+                                2.1.2. Matrice QCD (qualité, coûts, délais)<br>
+                                2.1.3. Suivi / comités / livraisons<br>
+                                • Publication App Store<br>
+                                • Publication Google Play<br>
+                                • Livraison finale<br>
+                                2.1.4. Documentation projet
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Responsabilités de l'Équipe</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Membre</th>
+                            <th>Rôle</th>
+                            <th>Responsabilités Principales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Prunelle</strong></td>
+                            <td>Cheffe de Projet</td>
+                            <td>
+                                • Coordination générale<br>
+                                • Gestion QCD<br>
+                                • Communication stakeholders<br>
+                                • Suivi planning et risques
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arnaud</strong></td>
+                            <td>Responsable Technique & IA</td>
+                            <td>
+                                • Architecture technique<br>
+                                • Développement IA<br>
+                                • Backend/Frontend<br>
+                                • Sécurité et performance
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moustapha</strong></td>
+                            <td>UX Designer</td>
+                            <td>
+                                • Design UI/UX<br>
+                                • Prototypes et maquettes<br>
+                                • Tests utilisateurs<br>
+                                • Charte graphique
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Christian</strong></td>
+                            <td>Responsable Communication</td>
+                            <td>
+                                • Stratégie communication<br>
+                                • Relations publiques<br>
+                                • Content marketing<br>
+                                • Documentation utilisateur
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>William</strong></td>
+                            <td>Responsable Partenariats</td>
+                            <td>
+                                • Développement partenariats<br>
+                                • Relations marques cosmétiques<br>
+                                • Stratégie B2B<br>
+                                • Veille concurrentielle
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="navigation-buttons">
+                    <a href="section2.html" class="btn btn-secondary">← Périmètre</a>
+                    <a href="section4.html" class="btn btn-primary">Budget →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

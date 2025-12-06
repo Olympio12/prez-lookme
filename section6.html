@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Risques - LookMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .risk-high { background: rgba(225, 48, 108, 0.1); border-left: 4px solid var(--ig-pink); }
+        .risk-medium { background: rgba(247, 119, 55, 0.1); border-left: 4px solid var(--ig-orange); }
+        .risk-low { background: rgba(252, 175, 69, 0.1); border-left: 4px solid var(--ig-yellow); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>06. Gestion des Risques</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="section1.html">Contexte</a></li>
+                <li><a href="section2.html">Périmètre</a></li>
+                <li><a href="section3.html">Organisation</a></li>
+                <li><a href="section4.html">Budget</a></li>
+                <li><a href="section5.html">Planning</a></li>
+                <li><a href="section6.html" class="active">Risques</a></li>
+                <li><a href="section7.html">Parties Prenantes</a></li>
+                <li><a href="section8.html">Succès</a></li>
+                <li><a href="section9.html">Charte</a></li>
+                <li><a href="section10.html">Prototype</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <h2>Registre des Risques</h2>
+                
+                <div class="highlight-box" style="background: var(--gradient); color: white; border: none;">
+                    <h3 style="color: white; margin-top: 0;">Méthodologie NIRO</h3>
+                    <p><strong>N</strong>iveau = Impact (I) × Probabilité (P) × Contrôle (C)</p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Impact (I) :</strong> 1-5 (faible à critique)<br>
+                        <strong>Probabilité (P) :</strong> 1-5 (rare à très fréquent)<br>
+                        <strong>Contrôle (C) :</strong> 1-3 (bien maîtrisé à non maîtrisé)
+                    </p>
+                </div>
+
+                <h3>Risques Critiques (Score > 30)</h3>
+                
+                <div class="card risk-high">
+                    <h4>Complexité IA LookMe</h4>
+                    <p><strong>Description :</strong> Incertitude sur le choix de solution IA (achat, API, ou développement interne) → risque de retard + dépassement budget</p>
+                    <table style="margin-top: 1rem;">
+                        <tr><td><strong>Impact :</strong></td><td>4/5</td></tr>
+                        <tr><td><strong>Probabilité :</strong></td><td>3/5</td></tr>
+                        <tr><td><strong>Contrôle :</strong></td><td>3/3</td></tr>
+                        <tr><td><strong>Score NIRO :</strong></td><td style="color: var(--ig-pink); font-weight: 700;">36</td></tr>
+                        <tr><td><strong>Évolution :</strong></td><td>↗ Croissant</td></tr>
+                    </table>
+                    <div class="highlight-box" style="margin-top: 1rem; border-color: var(--ig-pink);">
+                        <p><strong>Plan d'action :</strong></p>
+                        <ul>
+                            <li>Étude rapide des options (semaine 1)</li>
+                            <li>Prototype technique de validation (semaine 2)</li>
+                            <li>Décision avant sprint 2</li>
+                            <li><strong>Pilote :</strong> Arnaud (Tech Lead)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Risques Élevés (Score 20-30)</h3>
+                
+                <div class="card risk-medium">
+                    <h4>Retards dans le développement mobile</h4>
+                    <p><strong>Description :</strong> Implémentation des écrans plus longue que prévu (accueil, login, dashboard, IA...)</p>
+                    <table style="margin-top: 1rem;">
+                        <tr><td><strong>Impact :</strong></td><td>3/5</td></tr>
+                        <tr><td><strong>Probabilité :</strong></td><td>3/5</td></tr>
+                        <tr><td><strong>Contrôle :</strong></td><td>3/3</td></tr>
+                        <tr><td><strong>Score NIRO :</strong></td><td style="color: var(--ig-orange); font-weight: 700;">27</td></tr>
+                    </table>
+                    <div class="highlight-box" style="margin-top: 1rem; border-color: var(--ig-orange);">
+                        <p><strong>Plan d'action :</strong></p>
+                        <ul>
+                            <li>Sprints courts (2 semaines)</li>
+                            <li>Stand-up quotidiens</li>
+                            <li>Découper tâches plus finement</li>
+                            <li><strong>Pilote :</strong> Dev Mobile</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card risk-medium">
+                    <h4>Dépassement budget</h4>
+                    <p><strong>Description :</strong> L'IA, design ou développement coûtent plus que prévu</p>
+                    <table style="margin-top: 1rem;">
+                        <tr><td><strong>Impact :</strong></td><td>4/5</td></tr>
+                        <tr><td><strong>Probabilité :</strong></td><td>2/5</td></tr>
+                        <tr><td><strong>Contrôle :</strong></td><td>3/3</td></tr>
+                        <tr><td><strong>Score NIRO :</strong></td><td style="color: var(--ig-orange); font-weight: 700;">24</td></tr>
+                    </table>
+                    <div class="highlight-box" style="margin-top: 1rem; border-color: var(--ig-orange);">
+                        <p><strong>Plan d'action :</strong></p>
+                        <ul>
+                            <li>Suivi budgétaire hebdomadaire</li>
+                            <li>Arbitrage rapide en cas de dérive</li>
+                            <li>Réserve de contingence (5%)</li>
+                            <li><strong>Pilote :</strong> Prunelle (Chef de projet)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card risk-medium">
+                    <h4>Sécurité / confidentialité des données</h4>
+                    <p><strong>Description :</strong> Risque d'exposition des données utilisateur, non-conformité RGPD</p>
+                    <table style="margin-top: 1rem;">
+                        <tr><td><strong>Impact :</strong></td><td>5/5</td></tr>
+                        <tr><td><strong>Probabilité :</strong></td><td>2/5</td></tr>
+                        <tr><td><strong>Contrôle :</strong></td><td>2/3</td></tr>
+                        <tr><td><strong>Score NIRO :</strong></td><td style="color: var(--ig-orange); font-weight: 700;">20</td></tr>
+                    </table>
+                    <div class="highlight-box" style="margin-top: 1rem; border-color: var(--ig-orange);">
+                        <p><strong>Plan d'action :</strong></p>
+                        <ul>
+                            <li>Chiffrement end-to-end</li>
+                            <li>Audit sécurité externe</li>
+                            <li>Privacy by design</li>
+                            <li>Conformité RGPD 100%</li>
+                            <li><strong>Pilote :</strong> Arnaud (Tech Lead)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Risques Modérés (Score 10-19)</h3>
+                
+                <div class="card risk-low">
+                    <h4>Retard sur le design UI/UX</h4>
+                    <p><strong>Description :</strong> Les ateliers UX, moodboard et maquettes prennent plus de temps → impact planning</p>
+                    <table style="margin-top: 1rem;">
+                        <tr><td><strong>Score NIRO :</strong></td><td>18</td></tr>
+                        <tr><td><strong>Pilote :</strong></td><td>Prunelle (Chef de projet)</td></tr>
+                    </table>
+                </div>
+
+                <div class="card risk-low">
+                    <h4>Dépendance IA externes</h4>
+                    <p><strong>Description :</strong> Limitations, coûts variables, latence, indisponibilités des services tiers</p>
+                    <table style="margin-top: 1rem;">
+                        <tr><td><strong>Score NIRO :</strong></td><td>16</td></tr>
+                        <tr><td><strong>Plan d'action :</strong></td><td>Choisir API fiable + prévoir alternative + monitoring</td></tr>
+                    </table>
+                </div>
+
+                <div class="card risk-low">
+                    <h4>Mauvaise compréhension du besoin initial</h4>
+                    <p><strong>Description :</strong> Reworking sur UX, fonctionnalités ou IA dû à besoins mal définis</p>
+                    <table style="margin-top: 1rem;">
+                        <tr><td><strong>Score NIRO :</strong></td><td>16</td></tr>
+                        <tr><td><strong>Évolution :</strong></td><td>↘ Décroissant (ateliers clarification effectués)</td></tr>
+                    </table>
+                </div>
+
+                <div class="card risk-low">
+                    <h4>Problèmes de compatibilité mobile</h4>
+                    <p><strong>Description :</strong> Bugs sur Android/iOS, différentes tailles d'écran, devices anciens</p>
+                    <table style="margin-top: 1rem;">
+                        <tr><td><strong>Score NIRO :</strong></td><td>12</td></tr>
+                        <tr><td><strong>Plan d'action :</strong></td><td>Tests multi-devices + automatisation QA</td></tr>
+                    </table>
+                </div>
+
+                <h3>Matrice Risques - Impact vs Probabilité</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Probabilité Faible</th>
+                            <th>Probabilité Moyenne</th>
+                            <th>Probabilité Élevée</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Impact Critique</strong></td>
+                            <td>Sécurité RGPD</td>
+                            <td>Dépassement budget</td>
+                            <td style="background: rgba(225, 48, 108, 0.2);"><strong>Complexité IA</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Impact Élevé</strong></td>
+                            <td>Compatibilité mobile</td>
+                            <td style="background: rgba(247, 119, 55, 0.2);"><strong>Retards Dev</strong></td>
+                            <td>Besoin mal défini</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Impact Modéré</strong></td>
+                            <td>-</td>
+                            <td>Retard Design, Dépendances IA</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Stratégie de Mitigation</h3>
+                
+                <div class="highlight-box">
+                    <h4 style="margin-top: 0;">Principes de Gestion des Risques</h4>
+                    <ul>
+                        <li><strong>Identification proactive</strong> - Revue risques hebdomadaire en équipe</li>
+                        <li><strong>Suivi continu</strong> - Dashboard risques mis à jour en temps réel</li>
+                        <li><strong>Escalade rapide</strong> - Tout risque > 30 remonté immédiatement au COPIL</li>
+                        <li><strong>Plans de contingence</strong> - Solutions alternatives préparées pour risques critiques</li>
+                        <li><strong>Communication transparente</strong> - Partage ouvert avec stakeholders</li>
+                    </ul>
+                </div>
+
+                <div class="navigation-buttons">
+                    <a href="section5.html" class="btn btn-secondary">← Planning</a>
+                    <a href="section7.html" class="btn btn-primary">Parties Prenantes →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
