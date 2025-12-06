@@ -345,6 +345,7 @@ ul li::before {
 
     .nav-menu {
         flex-direction: column;
+        display: none;
     }
     .nav-container {
     padding: 0.7rem 0;
